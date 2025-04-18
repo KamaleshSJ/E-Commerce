@@ -3,14 +3,12 @@ import { createRoot } from "react-dom/client";
 import "./index.css";
 import App from "./App.jsx";
 import { BrowserRouter } from "react-router-dom";
-import { appContestProvider } from "./context/AppContext.jsx";
+import { AppContextProvider } from "./context/AppContxt.jsx";
 
 createRoot(document.getElementById("root")).render(
   <BrowserRouter>
-    <StrictMode>
-      <appContestProvider>
-        <App />
-      </appContestProvider>
-    </StrictMode>
+    <AppContextProvider>
+      <App />
+    </AppContextProvider>
   </BrowserRouter>
 );
